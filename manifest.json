@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Fxtwitter Link Rewrite",
+  "version": "1.0",
+  "description": "Rewrites links copied from twitter to be to fxtwitter.com for better unfurling in Discord and other places.",
+  "content_scripts": [
+    {
+      "matches": ["*://x.com/*", "*://twitter.com/*"],
+      "js": ["fxtwitterRewrite.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fxtwitterrewrite@qkleinfelter.com"
+    }
+  },
+  "permissions": ["activeTab", "clipboardRead", "clipboardWrite"]
+}
