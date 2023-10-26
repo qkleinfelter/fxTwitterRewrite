@@ -1,11 +1,12 @@
 setInterval(() => {
   const linkElement = findElementByText("Copy link");
-  if (linkElement) {
+  if (linkElement && !linkElement.classList.contains("event-listener-added")) {
     linkElement.addEventListener("click", () => {
       setTimeout(() => {
         readFromClipboard(writeNewLinkToClipboard);
       }, 500);
     });
+    linkElement.classList += " event-listener-added";
   }
 }, 100);
 
