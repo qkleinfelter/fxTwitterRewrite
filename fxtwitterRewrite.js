@@ -4,7 +4,7 @@ setInterval(() => {
     linkElement.addEventListener("click", () => {
       setTimeout(() => {
         readFromClipboard(writeNewLinkToClipboard);
-      }, 500);
+      }, 100);
     });
     linkElement.classList += " event-listener-added";
   }
