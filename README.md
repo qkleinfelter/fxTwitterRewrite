@@ -7,3 +7,7 @@ You can find the extension on the [Firefox Store Here.](https://addons.mozilla.o
 ## Building
 
 Update the version number in `manifest.json` and then run `web-ext build` to have the `web-ext` node package package the appropriate files to a new zip folder under the `web-ext-artifacts` directory, which can be uploaded to Mozilla for review!
+
+## Development
+
+This extension can be temporarily installed in firefox on the `about:debugging` page or by running `web-ext run` in your console.

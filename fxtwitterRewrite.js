@@ -46,5 +46,15 @@ function writeNewLinkToClipboard(text) {
   let newText = text
     .replace("twitter.com", "fxtwitter.com")
     .replace("x.com", "fixupx.com");
-  writeToClipboard(newText);
+  // Remove Twitter tracking parameters
+  let urlWithQueryParamsRemoved = removeQueryParams(newText, ["s", "t"]);
+  writeToClipboard(urlWithQueryParamsRemoved);
+}
+
+function removeQueryParams(url, paramsToRemove) {
+  const parsedUrl = new URL(url);
+  paramsToRemove.forEach((param) => {
+    parsedUrl.searchParams.delete(param);
+  });
+  return parsedUrl.toString();
 }
