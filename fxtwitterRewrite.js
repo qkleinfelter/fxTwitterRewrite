@@ -47,7 +47,7 @@ function writeNewLinkToClipboard(text) {
     .replace("twitter.com", "fxtwitter.com")
     .replace("x.com", "fixupx.com");
   // Remove Twitter tracking parameters
-  let urlWithQueryParamsRemoved = removeQueryParams(newText, ["s", "t"]);
+  let urlWithQueryParamsRemoved = removeQueryParams(newText, ["a", "s", "t"]);
   writeToClipboard(urlWithQueryParamsRemoved);
 }
 
